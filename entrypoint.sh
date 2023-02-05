@@ -8,6 +8,7 @@ if [[ -z $INPUT_GITHUB_TOKEN ]]; then
 fi
 
 echo "Configuring Git username, email, and pull behavior..."
+git config --global --add safe.directory "*"
 git config --local user.name "${INPUT_GIT_NAME}"
 git config --local user.email "${INPUT_GIT_EMAIL}"
 git config --local pull.rebase true
